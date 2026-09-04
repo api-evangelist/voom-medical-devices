@@ -1,0 +1,37 @@
+generated: '2026-09-04'
+method: searched
+source: https://www.voommedicaldevices.com/compliance
+summary: >-
+  Voom Medical Devices publishes an industry compliance program on its own site, but no API,
+  security or data-interchange conformance of any kind. There is no OpenAPI, GraphQL, MCP or
+  event contract on any host the company controls, so every contract-derived conformance claim
+  (oauth2, oidc, rfc9457, pagination, idempotency, FHIR, HL7v2, X12) is not applicable rather
+  than failed. Domain-standard conformance is likewise not applicable: this is a physical
+  implant manufacturer, and the health-care interchange standards its market uses (HL7v2, FHIR,
+  X12) are the concern of the hospitals that buy from it, not of a product it ships.
+conformance:
+- id: advamed-code-of-ethics
+  name: AdvaMed Code of Ethics on Interactions with Health Care Professionals
+  conforms: true
+  evidence: https://www.voommedicaldevices.com/compliance
+  note: >-
+    The compliance page states Voom endorses and abides by the Advanced Medical Technology
+    Association (AdvaMed) Code of Ethics and has received AdvaMed certification supporting its
+    compliance program. This is a self-declaration published by the company, not a third-party
+    audit result.
+- id: california-hsc-119400
+  name: California Health and Safety Code sections 119400-119402 (marketing practices)
+  conforms: true
+  evidence: https://www.voommedicaldevices.com/compliance
+  note: >-
+    The company declares it has adopted a compliance program incorporating the AdvaMed Code and
+    represents that it is in compliance with that code, the annual declaration California
+    requires of medical device manufacturers.
+not_applicable:
+- id: api-transport-and-error-standards
+  reason: no published API contract on any Voom-controlled host (36 /.well-known probes, 4 hosts, all 404)
+- id: domain_standard_conformance
+  reason: >-
+    reward-only check with no applicable standard; Voom ships implants and instrument kits, not
+    a data interface, so no HL7v2/FHIR/X12/ISO-20022 signature can appear in a contract it does
+    not publish

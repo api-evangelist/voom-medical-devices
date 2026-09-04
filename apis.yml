@@ -1,8 +1,15 @@
 aid: voom-medical-devices
 name: Voom Medical Devices
-description: 'Voom Medical Devices is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'Voom Medical Devices, Inc. is an orthopedic medical device and surgical innovation company
+  founded by bunion surgeon Dr. Neal Blitz and headquartered in Brentwood, Tennessee. Voom designs implants
+  and procedural systems for minimally invasive bunion surgery (MIBS) and foot-and-ankle reconstruction,
+  including the patented Revcon non-compression dual-zone bone screw system, the Bunionplasty 360 Bunion
+  Repair procedure, and the MIBS CoPilot Shift + Targeting Guide single-use sterile kit. The company sells
+  to surgeons and hospitals, runs a surgeon training program, and operates the patient-facing Bunionplasty.com
+  procedure site with a doctor locator. It is a physical device manufacturer: it publishes no developer
+  portal, no API documentation and no machine-readable API contract on any host it controls.'
 url: https://raw.githubusercontent.com/api-evangelist/voom-medical-devices/refs/heads/main/apis.yml
+image: https://cdn.sanity.io/images/wu4qotw8/production/d23f8167eb501cf7de5bc1394a7ac4993baf8501-1200x627.jpg
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -10,8 +17,15 @@ x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-04'
 modified: '2026-09-04'
+position: Producing
 tags:
 - Company
+- Medical Devices
+- Health Care
+- Orthopedics
+- Surgery
+- Medical Technology
+- Manufacturing
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +33,46 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/voom-medical-devices-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.voommedicaldevices.com/
+- type: About
+  url: https://www.voommedicaldevices.com/about-us
+- type: Support
+  url: https://www.voommedicaldevices.com/contact-us
+- type: PrivacyPolicy
+  url: https://www.voommedicaldevices.com/privacy-policy
+- type: TermsOfService
+  url: https://www.voommedicaldevices.com/terms-of-use
+- type: Compliance
+  url: https://www.voommedicaldevices.com/compliance
+- type: Newsroom
+  url: https://www.voommedicaldevices.com/about-us/news-events
+- type: LinkedIn
+  url: https://www.linkedin.com/company/voomdevices
+- type: Conformance
+  url: conformance/voom-medical-devices-conformance.yml
+- type: LLMsTxt
+  url: llms/voom-medical-devices-llms.txt
+x-enrichment:
+  date: '2026-09-04'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: Voom manufactures bunion-surgery implants and instrument kits; its entire public site is 22
+    URLs of product, training and compliance pages, with no api./developer./docs. subdomain resolving
+    and every /.well-known/, /openapi.json and /llms.txt path returning 404.
+  evidence:
+  - url: https://www.voommedicaldevices.com/openapi.json
+    status: 404
+  - url: https://www.voommedicaldevices.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.voommedicaldevices.com/llms.txt
+    status: 404
+  - url: https://www.voommedicaldevices.com/sitemap-0.xml
+    status: 200
+  checked: '2026-09-04'

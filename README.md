@@ -64,5 +64,9 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Voom Medical Devices is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Voom Medical Devices, Inc. is an orthopedic medical device and surgical innovation company in Brentwood, Tennessee, founded by bunion surgeon Dr. Neal Blitz. It makes implants and procedural systems for minimally invasive bunion surgery (MIBS) and foot-and-ankle reconstruction, including the patented Revcon non-compression dual-zone bone screw system, the Bunionplasty 360 Bunion Repair procedure, and the MIBS CoPilot Shift + Targeting Guide sterile kit.
+
+Voom publishes no API. A 2026-09-04 enrichment pass probed nine `/.well-known/` paths plus `/openapi.json`, `/swagger.json`, `/api-docs` and `/llms.txt` across four company hosts (36 well-known probes, all HTTP 404), resolved no `api.`, `developer.`, `docs.`, `dev.` or `portal.` subdomain, and read the site's complete 22-URL sitemap, which contains no developer or documentation section. There is no GitHub organization and no first-party package on npm.
+
+- https://www.voommedicaldevices.com/
+- https://www.bunionplasty.com/
